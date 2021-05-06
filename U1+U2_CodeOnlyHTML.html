@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Uebung2 - GeosoftwareI</title>
+  <style>
+    .p {
+  font-family: Arial, Helvetica, sans-serif;
+  }
+  </style>
+</head>
+<body>
+
+<h1 style="color:darkcyan;" class="p">
+  Übung 2: User interface for the intersection of a route with a given polygon and calculation of distances</h1>
+<br>
+<p class="p"><b>The following list shows the distances (in km) resulting from the intersection between a given route and a given polygon.
+    The list is sorted in an ascending order.</b></p>
+
+    <p class="p" id="ListDistances"></p>
+
+    <br>
+
+    <p class="p"><b>Furthermore the sum of all distances (in km) is given:</b></p>
+
+    <p class="p" id="SumDistances"></p>
+
+    <br>
+    <br>
+
+    <p class="p"><b>To calculate the distances resulting from the intersection with the given polygon
+       for any route please enter a route in the following text field.
+       <br><u>Please note:</u> The route must be given as GeoJSON feature collection of type Line String. 
+       (To create a GeoJSON please see: <a href=https://geojson.io/>https://geojson.io/</a>)</b></p>
+     
+    <form action="/action_page.php" onsubmit="publishForSubmission()">
+      <input type="text" id="GeoJSON_Route">
+      <input type="submit" value="Calculate">
+    </form>
+
+    <br>
+
+    <p class="p"><b>The following list shows the distances (in km) resulting from the intersection
+      between the <u>submitted</u> route and the given polygon. The list is sorted in an ascending order.</b></p>
+    <p class="p" id="NewListDistances"></p>
+    <p id="Eingabe"></p>
+    
+    <br>
+    
+    <p class="p"><b>Furthermore the sum of all distances (in km) is given:</b></p>
+    <p class="p" id="NewSumDistances"></p>
+    
+    <br>
+
+    <p class="p"><b>The given polygon as GeoJSON is:</b></p>
+    <p class="p" id="GeoJSONPolygon"></p>
+
+    <br>
+
+    <script src="U1+U2_CodeOnlyJS.js"></script>
+    <script src="U2_ScriptCode.js"></script>
+
+</body>
